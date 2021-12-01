@@ -1,0 +1,17 @@
+<nav class="navbar navbar-transparent" data-spy="affix" *ngIf="b.stre"  >
+  <div class="collapse navbar-collapse" id="my-nav">
+    <ul class="nav navbar-nav">
+    <li class="active"><a href="#" style="color:black; font-weight: bold">STREAMS</a></li> 
+    <li><a  (click)="display1()"  style="color:black; font-weight: bold">JEE</a></li>
+    <li><a  (click)="display2()" style="color:black; font-weight: bold">MS</a></li>
+    <li><a  (click)="display3()" style="color:black; font-weight: bold">DATA SCIENCE</a></li>
+    <li><a  (click)="display4()" style="color:black; font-weight: bold">UI</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right" id="my-nav">
+    <!-- <li><a routerLink="/myprofile"><span style="color:black; font-weight: bold" class="glyphicon glyphicon-user"> My Profile</span></a></li> -->
+    <li><a (click)="display5()" ><span style="color:black; font-weight: bold" class="glyphicon glyphicon-log-out">Logout</span></a></li>
+    </ul>
+  </div>
+  
+</nav>
+

@@ -1,0 +1,47 @@
+<nav class="navbar navbar-transparent" data-spy="affix"  >
+        <div class="collapse navbar-collapse" id="my-nav">
+          <ul class="nav navbar-nav">
+          <li class="active"><a  style="color:black; font-weight: bold">STREAMS</a></li> 
+          </ul>
+          <ul class="nav navbar-nav navbar-right" id="my-nav">
+          <li><a (click)="display5()" ><span style="color:black; font-weight: bold" class="glyphicon glyphicon-log-out">Logout</span></a></li>
+          </ul>
+        </div>
+        
+    </nav><br>
+  <br>
+  <br>
+  <div class="col-md-6 col-md-offset-3">
+      <div class="panel panel-default">
+        <div class="panel-heading text-center">
+              <h1>USER INTERFACE</h1>
+        </div>
+          <div class="panel-body">
+              The user interface (UI), in the industrial design field of human–computer 
+              interaction, is the space where interactions between humans and machines 
+              occur. The goal of this interaction is to allow effective operation and
+               control of the machine from the human end, whilst the machine simultaneously
+                feeds back information that aids the operators' decision-making process.
+                 Examples of this broad concept of user interfaces include the interactive
+                  aspects of computer operating systems, hand tools, heavy machinery
+                   operator controls, and process controls. 
+          
+  <br>
+  <div class="col-md-2 col-md-offset-5">
+             <button (click)="getdetails()" class="btn btn-primary">
+               View</button>
+               </div>
+            
+              </div>
+              <div *ngFor="let val of list;let i=index">
+
+                <div style="list-style-type:disc; font-size: large; color: black; text-align: left">
+                  
+                    <li *ngIf="list[i][2]=='UI'">{{list[i]}}</li>
+              
+                    
+                    </div>
+                 </div>
+          
+             </div>
+</div>

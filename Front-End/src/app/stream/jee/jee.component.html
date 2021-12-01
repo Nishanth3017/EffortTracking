@@ -1,0 +1,48 @@
+<nav class="navbar navbar-transparent" data-spy="affix"  >
+    <div class="collapse navbar-collapse" id="my-nav">
+      <ul class="nav navbar-nav">
+      <li class="active"><a  style="color:black; font-weight: bold">STREAMS</a></li> 
+      </ul>
+      <ul class="nav navbar-nav navbar-right" id="my-nav">
+      <li><a (click)="display5()" ><span style="color:black; font-weight: bold" class="glyphicon glyphicon-log-out">Logout</span></a></li>
+      </ul>
+    </div>
+    
+</nav>
+  <br>
+  <br>
+  <br>
+  <div class="col-md-6 col-md-offset-3">
+      <div class="panel panel-default">
+        <div class="panel-heading text-center">
+              <h1>JAVA</h1>
+        </div>
+          <div class="panel-body">
+        Java is a general-purpose programming language that
+        is class-based, object-oriented,and designed to have as few implementation 
+        dependencies as possible. It is intended to let application developers
+        "write once, run anywhere" (WORA),meaning that compiled Java code can
+        run on all platforms that support Java without the need for recompilation.
+        Java applications are typically compiled to "bytecode" that can run on any 
+        Java virtual machine (JVM) regardless of the underlying computer architecture.
+          
+          
+  <br>
+  <div class="col-md-2 col-md-offset-5">
+             <button (click)="getdetails()" class="btn btn-primary">
+               View</button>
+               </div>
+            
+              </div>
+              <div *ngFor="let val of list;let i=index">
+
+                <div style="list-style-type:disc; font-size: large; color: black; text-align: left">
+                  
+                    <li *ngIf="list[i][2]=='JEE'">{{list[i]}}</li>
+                  
+                    
+                    </div>
+                 </div>
+          
+             </div>
+</div>

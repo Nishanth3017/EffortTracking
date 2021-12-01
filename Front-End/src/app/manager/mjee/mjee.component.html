@@ -1,0 +1,91 @@
+  <nav class="navbar navbar-transparent" data-spy="affix"  >
+    <div class="collapse navbar-collapse" id="my-nav">
+      <ul class="nav navbar-nav">
+      <li class="active"><a  style="color:black; font-weight: bold">STREAMS</a></li> 
+      </ul>
+      <ul class="nav navbar-nav navbar-right" id="my-nav">
+      <li><a (click)="display5()" ><span style="color:black; font-weight: bold" class="glyphicon glyphicon-log-out">Logout</span></a></li>
+      </ul>
+    </div>
+    
+</nav>
+  <br>
+  <br>
+  <br>
+  <div class="col-md-6 col-md-offset-3">
+      <div class="panel panel-default">
+        <div class="panel-heading text-center">
+              <h1 style="font-family:cursive">JAVA</h1>
+        </div>
+          <div class="panel-body">
+        Java is a general-purpose programming language that
+        is class-based, object-oriented,and designed to have as few implementation 
+        dependencies as possible. It is intended to let application developers
+        "write once, run anywhere" (WORA),meaning that compiled Java code can
+        run on all platforms that support Java without the need for recompilation.
+        Java applications are typically compiled to "bytecode" that can run on any 
+        Java virtual machine (JVM) regardless of the underlying computer architecture.
+          
+          
+  <br>
+  <div class="col-md-2 col-md-offset-5">
+             <button (click)="getdetails()" class="btn btn-primary">
+               View</button>
+               </div>
+            
+              </div>
+              <div *ngFor="let val of list;let i=index">
+
+                <div style="list-style-type:disc; font-size: large; color: black; text-align: left">
+                  <div (click)="display(i)">
+                        <li *ngIf="list[i][2]=='JEE'">{{list[i]}}</li>
+                  </div>
+                      </div>
+                 </div>
+             </div>
+
+            </div>
+            <br>
+            
+      
+<div class="row" *ngIf="show">
+  <div class="col-md-4 col-md-offset-4">
+    <div class="panel panel-primary">
+      <div class="panel-heading text-center">Employee Allocation</div>
+      <div class="panel-body">
+    <form [formGroup]="allocateForm" (ngSubmit)="effort()">
+    <div class="form-group">
+      <label>Employee Name:</label>
+      
+      <input type="text" formControlName="name" value="{{list[count][0]}}">
+      </div>
+      <div class="form-group">
+          <label>Employee Id:</label>
+          <input type="number" formControlName="empId" value="{{list[count][1]}}">
+      </div> 
+      
+         <Label>Select Type of Question paper</Label>
+        <select  class="dropdown"  name="allocate"  required="" formControlName="allocate">
+		
+          <option style="color:white" value="">---Select---</option>
+          <option value="HandsOn">HandsOn</option>
+          <option value="Objective">Objective</option>
+          <option value="Review">Review</option>
+        
+        </select>
+      <div class="form-group text-center">
+          <button
+          class="btn btn-primary">Allocate</button>
+        </div>   
+     
+  </form>
+  <div *ngIf="errorMessage!=null">
+    <span class="text-danger">{{errorMessage}}</span>
+    </div>
+    <div *ngIf="successMessage!=null">
+    <span class="text-success">{{successMessage}}</span>
+    </div>
+  </div> 
+</div>
+</div>
+</div>

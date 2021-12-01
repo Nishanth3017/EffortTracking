@@ -1,0 +1,19 @@
+<div class="login-page">
+  <h2 style="color:black; font-weight: bold">LOGIN FORM</h2>
+      <div class="form">
+        <br>
+        <div class="formGroup">
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+          <input type="text" placeholder="employee id" formControlName="empId">
+          <input type="password" placeholder="password" formControlName="password">
+          <button class="btn btn-primary" [disabled]="!loginForm.valid">login</button>
+         </form>
+         <div *ngIf="errorMessage!=null">
+          <span class="text-danger">{{errorMessage}}</span>
+        </div>
+        <div *ngIf="successMessage!=null">
+          <span class="text-success">{{successMessage}}</span>
+        </div>
+         </div>
+      </div>
+  </div>

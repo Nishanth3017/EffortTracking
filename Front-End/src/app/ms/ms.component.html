@@ -1,0 +1,51 @@
+<nav class="navbar navbar-transparent" data-spy="affix"  >
+        <div class="collapse navbar-collapse" id="my-nav">
+          <ul class="nav navbar-nav">
+          <li class="active"><a  style="color:black; font-weight: bold">STREAMS</a></li> 
+          </ul>
+          <ul class="nav navbar-nav navbar-right" id="my-nav">
+          <li><a (click)="display5()" ><span style="color:black; font-weight: bold" class="glyphicon glyphicon-log-out">Logout</span></a></li>
+          </ul>
+        </div>
+        
+    </nav>
+    <br>
+  <br>
+  <br>
+  <div class="col-md-6 col-md-offset-3">
+      <div class="panel panel-default">
+        <div class="panel-heading text-center">
+              <h1>MICROSOFT .NET</h1>
+        </div>
+          <div class="panel-body">
+              .NET Framework (pronounced as "dot net") is a software framework developed by 
+              Microsoft that runs primarily on Microsoft Windows. It includes a large class 
+              library named as Framework Class Library (FCL) and provides language 
+              interoperability (each language can use code written in other languages) 
+              across several programming languages. Programs written for .NET Framework
+              execute in a software environment (in contrast to a hardware environment) 
+              named the Common Language Runtime (CLR). The CLR is an application virtual 
+              machine that provides services such as security, memory management, and 
+              exception handling.
+          
+          
+  <br>
+  <div class="col-md-2 col-md-offset-5">
+             <button (click)="getdetails()" class="btn btn-primary">
+               View</button>
+               </div>
+            
+              </div>
+
+              <div *ngFor="let val of list;let i=index">
+
+                <div style="list-style-type:disc; font-size: large; color: black; text-align: left">
+                  
+                    <li *ngIf="list[i][2]=='MS'">{{list[i]}}</li>
+                 
+                    
+                    </div>
+                 </div>
+          
+             </div>
+</div>

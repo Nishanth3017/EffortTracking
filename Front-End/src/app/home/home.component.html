@@ -1,0 +1,39 @@
+<nav class="navbar navbar-transparent" data-spy="affix"  >
+
+  <div class="navbar-header">
+    <a style="color:black; font-weight: bold" class="navbar-brand" href="#">ETA</a>
+  </div>
+  <ul class="nav navbar-nav">
+  <li class="active" ><a style="color:black; font-weight: bold" href="#">Home</a></li>
+  </ul>
+  <ul class="nav navbar-nav navbar-right"> 
+      <li><a style="color:black; font-weight: bold" [routerLink]="['/home','login']">Login</a></li>
+      <li><a style="color:black; font-weight: bold" [routerLink]="['/home','register']">Register</a></li>
+      <!-- <li><a style="color:black; font-weight: bold" (click)="mregister()"><span class="glyphicon glyphicon-user"></span>  Register as Manager</a></li>
+      <li><a style="color:black; font-weight: bold" (click)="rregister()"><span class="glyphicon glyphicon-user"></span>  Register as Reviewer</a></li> -->
+  </ul> 
+
+</nav>
+<router-outlet></router-outlet> 
+<br>
+<br>
+<br>
+
+<!-- <div *ngIf="b.mar">
+<marquee style="color:black">WELCOME TO ETA</marquee> -->
+<!-- <div class="login-page" >
+<h2 style="color:black; font-weight: bold">Login As</h2>
+    <div class="form">
+      <form class="login-form">
+      <br>
+        <button  style="color:black; font-weight: bold" (click)="employee()">Employee</button>
+        <button style="color:black; font-weight: bold" (click)="manager()">Manager</button>
+        <button style="color:black; font-weight: bold" (click)="reviewer()">Reviewer</button>
+      </form>
+</div> -->
+
+
+<!-- </div> -->
+
+
+      

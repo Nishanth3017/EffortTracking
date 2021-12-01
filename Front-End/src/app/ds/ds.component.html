@@ -1,0 +1,53 @@
+<nav class="navbar navbar-transparent" data-spy="affix"  >
+        <div class="collapse navbar-collapse" id="my-nav">
+          <ul class="nav navbar-nav">
+          <li class="active"><a  style="color:black; font-weight: bold">STREAMS</a></li> 
+          </ul>
+          <ul class="nav navbar-nav navbar-right" id="my-nav">
+          <li><a (click)="display5()" ><span style="color:black; font-weight: bold" class="glyphicon glyphicon-log-out">Logout</span></a></li>
+          </ul>
+        </div>
+        
+    </nav>
+    <br>
+  <br>
+  <br>
+  <div class="col-md-6 col-md-offset-3">
+      <div class="panel panel-default">
+        <div class="panel-heading text-center">
+              <h1>DATA SCIENCE</h1>
+        </div>
+          <div class="panel-body">
+              Data science is a multi-disciplinary field that uses scientific methods, 
+              processes, algorithms and systems to extract knowledge and insights from
+               structured and unstructured data.Data science is the same concept
+                as data mining and big data: "use the most powerful hardware, the most
+                 powerful programming systems, and the most efficient algorithms to solve 
+                 problems".
+              Data science is a "concept to unify statistics, data analysis, machine
+               learning and their related methods" in order to "understand and analyze 
+               actual phenomena" with data.
+             
+          
+          
+  <br>
+  <br>
+  <div class="col-md-2 col-md-offset-5">
+             <button (click)="getdetails()" class="btn btn-primary">
+               View</button>
+               </div>
+            
+              </div>
+
+              <div *ngFor="let val of list;let i=index">
+
+                <div style="list-style-type:disc; font-size: large; color: black; text-align: left">
+                  
+                    <li *ngIf="list[i][2]=='DS'">{{list[i]}}</li>
+                  
+                    
+                    </div>
+                 </div>
+          
+             </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="login-page">
+  <h2 style="color:black; font-weight: bold" >Login Form</h2>
+      <div class="form">
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <br>
+          <input type="text" placeholder="reviewer name" formControlName="reviewerId"/>
+          <input type="password" placeholder="password" formControlName="password"/>
+          <button  >login</button>
+         
+        </form>
+      </div>
+    </div>

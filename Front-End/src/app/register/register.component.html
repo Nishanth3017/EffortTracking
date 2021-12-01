@@ -1,0 +1,60 @@
+<div class="main-w3layouts wrapper">
+<h2 style="color:black; font-weight: bold">REGISTRATION FORM</h2>
+	<div class="main-agileinfo">
+	<div class="agileits-top">
+	<form [formGroup]="registerForm" (ngSubmit)="saveDetails()">
+	<label style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Employee Name:</label>
+	<input   type="text" name="name"  required="" formControlName="name">
+	<div *ngIf="!registerForm.controls.name.valid 
+	&& registerForm.controls.name.dirty">
+    <strong style="color:red;font-weight: bold">Should not contain special characters</strong>
+	</div>
+	<br>	
+		<label style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Stream:</label>
+		<br><br><select  class="dropdown"  name="stream"  required="" formControlName="stream">
+		
+		<option style="background-color: LightGrey;"  value="">---Stream---</option>
+		<option style="background-color: LightGrey;" *ngFor="let str of streamList" value="{{str}}">{{str}}</option>
+	
+	</select>
+		<br>
+		<br>	
+		<label style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Date of Birth:</label>
+		<input id="dateofbirth"  class="dateclass" type="date" required="" formControlName="dateOfBirth">
+		<div *ngIf="!registerForm.controls.dateOfBirth.valid &&
+		registerForm.controls.dateOfBirth.dirty">
+		<strong style="color:red;font-weight: bold">You should be atleast 21 years</strong>
+		</div>
+		<br>
+
+		
+			
+			<label style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Password:</label>
+		<input    type="password" name="password"  required="" formControlName="password">
+			<div *ngIf="!registerForm.controls.password.hasError('required') && registerForm.controls.password.hasError('pattern') &&
+			registerForm.controls.password.dirty">
+			<span style="color:red;font-weight: bold" id="password">Should contain minimum eight characters, maximum 15 characters,
+				at least one upper, lower case letter, one special char and one number</span>
+		</div>
+		<label style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Confirm Password:</label>
+		<div class="form-group">
+	
+			  <input type="password" class="form-control" formControlName="cnfpassword" >
+			  <div *ngIf="registerForm.controls.password.value!=registerForm.controls.cnfpassword.value && registerForm.controls.cnfpassword.dirty" class="text-danger">
+				<span style="color:red;font-weight: bold" id="password">Password does not match</span>
+			   </div>
+			  </div>
+		<br>
+					<button type="submit" class="btn btn-primary" [disabled]="!registerForm.valid" >Register</button>
+				 
+				</form>
+				<div *ngIf="errorMessage!=null">
+					<span class="text-danger">{{errorMessage}}</span>
+				  </div>
+				  <div *ngIf="successMessage!=null">
+					<span class="text-success;font-weight:bold;">{{successMessage}}</span>
+				  </div>
+			</div>
+		</div>
+	</div>
+
